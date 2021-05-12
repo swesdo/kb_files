@@ -53,7 +53,7 @@ read folder_clean
 
 if [[ $folder_clean == y* ]]
 then
-  echo "Cleaning folder of everything excep rgbkb folder" ; cd keyboards ; find ./ -maxdepth 1 ! -iname rgbkb ! -iname readme.md -execdir rm -vrf {} \; cd ..
+  echo "Cleaning folder of everything excep rgbkb folder" ; cd keyboards ; find ./ -maxdepth 1 ! -iname rgbkb ! -iname readme.md -execdir rm -vrf {} \; && cd ..
 else
   echo "Skipping folder clean."
 fi
@@ -73,6 +73,7 @@ echo "
 -----------------
 flashing
 -----------------
+# there might be issues flashing mun from command line, in that case find a mac or windows computer to use qmk_toolbox to flash.
 # connect left half, place in bootloader mode
 # copy the next line and paste into terminal:
 

@@ -30,7 +30,7 @@ git submodule update --init --recursive
 
 # change directory to keyboards, clear out everything that isn't rgbkb. change directories back up one level to dev_qmk/qmk_firmware. Clears around 100M of data.
 
-cd keyboards ; find ./ -maxdepth 1 ! -iname rgbkb ! -iname readme.md -execdir rm -vrf {} \; cd ..
+cd keyboards ; find ./ -maxdepth 1 ! -iname rgbkb ! -iname readme.md -execdir rm -vrf {} \; && cd ..
 
 # compile firmware, replace default with your keymap name if you want to program your own mapping.
 
